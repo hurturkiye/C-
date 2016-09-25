@@ -1,0 +1,16 @@
+namespace _004_Kullanicidan_Veri_Alma
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Lütfen Adınızı giriniz...:");
+            String ad = Console.ReadLine();
+            Console.WriteLine("Merhaba " + ad);
+
+            Console.Write("Lütfen yaşınızı giriniz...:");
+            int yas = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Demek " + yas + " yaşındasınız :)"); // Yaş ile ne tür bir işlem yapmayı düşünüyorsun????
+        }                                                           // String olarak kalsa da olur ama netice de bu bir örnek :)
+    }
+}
