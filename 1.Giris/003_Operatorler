@@ -1,0 +1,44 @@
+namespace _003_Operatorler
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Operatörler
+
+            int sayi_1 = 68;
+            int sayi_2 = 7;
+
+            int toplam = sayi_1 + sayi_2;
+            int bolum = sayi_1 / sayi_2;
+            int kalan = sayi_1 % sayi_2;
+
+            Console.WriteLine(toplam);
+            Console.WriteLine(bolum);
+            Console.WriteLine(kalan);
+
+            // Kısa Operatörler (Shorhand Operators)
+
+            Console.WriteLine("------------------");
+
+            int x = 2;
+            int y = x++;
+            int z = x--;
+
+            Console.WriteLine("x:" + x + "   y:" + y + "   z:" + z);
+
+            Console.WriteLine("------------------");
+
+            int a = 2;
+            int b = ++a;
+            int c = --a;
+
+            Console.WriteLine("a:" + a + "   b:" + b + "   c:" + c);
+
+            Console.WriteLine("------------------");
+
+            Console.WriteLine("Ali topu at" + 233 + 34);
+            Console.WriteLine("Ali topu at" + (233 + 34));
+        }
+    }
+}
