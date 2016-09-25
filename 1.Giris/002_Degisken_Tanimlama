@@ -1,0 +1,36 @@
+namespace _002_Degisken_Tanimlama
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Merhaba Dünya");
+
+            // Kaçış Karakterleri
+
+            Console.WriteLine("\tMerhaba Dünya\n\nMerhaba Dünya");
+            Console.WriteLine("\"in double quote\" , \\çift tırnak içinde");
+
+            // Bu bir yorum satırıdır.
+
+            /*
+             Bunlar da birer yorum satırıdır.
+             Bunlar da birer yorum satırıdır.
+             Bunlar da birer yorum satırıdır.
+             */
+
+            // Değişken Tanımlama Örnekleri
+
+            int sayi_1 = 67;
+            char kr_1 = 'a';
+            char kr_2 = 'b';
+            String adSoyad = "Adamsın Adam";
+
+            Console.WriteLine(sayi_1);
+            Console.WriteLine(kr_1);
+            Console.WriteLine(kr_2);
+            Console.WriteLine(adSoyad);
+
+        }
+    }
+}
