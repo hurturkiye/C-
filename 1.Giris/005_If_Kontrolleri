@@ -1,0 +1,55 @@
+static void Main(string[] args)
+        {
+            Console.Write("Yaşınızı giriniz....:");
+            int yas = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Demek {0} yaşındasınız; gençmişsiniz :)", yas);
+
+            // Örnek - 1
+            // Reşit Kontrolü yapan if bloğu
+            if (yas >= 18) {
+                Console.WriteLine("Reşitsiniz :)");
+            }
+            else {
+                Console.WriteLine("Reşit değilsiniz :(");                            
+            }
+
+            // Örnek - 2
+
+            int x = 15;
+		    int y = 14;
+		
+		    if (x>15 && ++y == 15) { // Burada && veya & olarak dene farkı gör!!!!
+			    Console.WriteLine("AND Kontrolüne girildi..!");	
+		    }
+		    Console.WriteLine("y..1..:" + y);
+		
+		    if (x>15 || ++y == 15) { // Burada || veya | olarak dene farkı gör!!!!
+                Console.WriteLine("OR Kontrolüne girildi..!");	
+		    }
+		    Console.WriteLine("y..2..:" + y);
+            
+            // Örnek - 3 - Kullanıcının seçimine göre daire yada dörtgen alanı hesaplaplayan program
+
+            Console.Write("Daire alanı hesaplamak için (1); Dikdörtgen alanı hesaplamak için (2) basınız!");
+            String secim = Console.ReadLine();
+
+            if (secim == "1") 
+            {
+                Console.Write("Daire'nin yarıçapını giriniz...:");
+                int r = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("{0} yarıçaplı Daire'nin alanı...:{1}", r, Math.PI * r * r);
+            }
+            else if (secim == "2") 
+            {
+                Console.WriteLine("Dikdörtgen'in uzun kenar uzunluğunu giriniz....:");
+                int uzunKenar = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Dikdörtgen'in kısa kenar uzunluğunu giriniz....:");
+                int kisaKenar = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Dikdörtgen'in alanı...:{0}", uzunKenar * kisaKenar);
+            }
+            else
+            {
+                Console.WriteLine("Yanlış bir seçim yaptınız..!!");
+            }
+
+        }
