@@ -1,0 +1,24 @@
+static void Main(string[] args)
+        {
+            // Switch Case yapısı örneği
+
+            Console.Write("(1)-->Mağazalar (2)-->Ürünler (3)-->Personel --Lütfen seçiminizi yapınız--");
+            int secim = Convert.ToInt32(Console.ReadLine());
+
+            switch (secim)
+            {
+                case 1:
+                    Console.WriteLine("1--Mağazalar");
+                    break;
+                case 2:
+                    Console.WriteLine("2--Ürünler");
+                    break;
+                case 3:
+                    Console.WriteLine("3--Personel");
+                    break;
+                default:
+                    Console.WriteLine("Yanlış seçim");
+                    break;
+            }
+                
+        }
