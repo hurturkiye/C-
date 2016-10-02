@@ -1,0 +1,44 @@
+ static void Main(string[] args)
+        {
+            // 0'dan 10'a kadar olan sayıları yazdır
+
+            // While ile
+
+            int i = 0;
+            while (i < 10)
+            {
+                Console.WriteLine(i);
+                i++;
+            }
+            
+            // for ile
+
+            for (int j = 0; j < 10; j++)
+            {
+                Console.WriteLine(j);
+            }
+
+            // break deyimi
+
+            for (int k = 0; k < 10; k++)
+            {
+                if (k == 5)
+                {
+                    break;
+                }
+                Console.WriteLine(k);
+            }
+
+            // continue deyimi
+
+            for (int l = 0; l < 10; l++)
+            {
+                if (l == 5)
+                {
+                    continue;
+                }
+                Console.WriteLine(l);
+            }
+
+
+        }
