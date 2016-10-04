@@ -1,0 +1,60 @@
+namespace _009_Diziler
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Tek Boyutlu Diziler
+
+            // Dizi Tanımlama - Aşağıdaki kodlar çalıştığında default değerleri görüyoruz.
+
+            int[] myArray = new int[5]; // İçinde tamsayı değerler barındıran 5 elemanlı bir dizi
+
+            for(int i = 0; i<myArray.Length; i++)
+            {
+                Console.WriteLine("Index...:{0} Değer...:{1}", i, myArray[i]);
+            }
+
+            Console.WriteLine("----------------------");
+
+            char[] myCharacters = new char[5]; // İçinde karakter barındıran 5 elemanlı bir dizi (char: tek karakter)
+
+            for (int i = 0; i < myCharacters.Length; i++)
+            {
+                Console.WriteLine("Index...:{0} Değer...:{1}", i, myCharacters[i]);
+            }
+
+            Console.WriteLine("----------------------");
+
+            string[] myStrings = new string[5]; // İçinde string değerler barındıran 5 elemanlı bir dizi
+
+            for (int i = 0; i < myStrings.Length; i++)
+            {
+                Console.WriteLine("Index...:{0} Değer...:{1}", i, myStrings[i]);
+            }
+
+            //foreach
+            Console.WriteLine("----------------------");
+
+            string[] isimler = new string[3];   // içinde string değerler barındıran 3 elemanlı bir dizi
+            isimler[0] = "Ali";                 // Değerler atanıyor.
+            isimler[1] = "Ahmet";               // Değerler atanıyor.
+            isimler[2] = "Ayşe";                // Değerler atanıyor.
+
+            foreach(string Str in isimler) // foreach döngüsü örnek
+            {
+                Console.WriteLine(Str);
+            }
+
+            // Çok Boyutlu Diziler
+            Console.WriteLine("----------------------");
+
+            int[,] matris;                          // içinde integer tipinde değerler barındıran çok boyutlu dizi tanımlanıyor
+            matris = new int[2, 2];                 // dizinin boyutu veriliyor
+            foreach(int sayi in matris)             // foreach döngüsü ile matris dizisi ekrana yazdırılıyor
+            {
+                Console.WriteLine("---" + sayi);
+            }
+        }
+    }
+}
