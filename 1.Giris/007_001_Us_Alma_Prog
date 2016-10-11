@@ -1,0 +1,30 @@
+namespace ConsoleApplication5_US_Alma_For_Dongu
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // US Alma Programı - For Döngüsüne Örnek
+            /*
+            int taban = 0, us = 0, i = 0, sonuc = 1;
+
+            Console.Write("Taban sayısını giriniz...:");
+            taban = Int32.Parse(Console.ReadLine());
+
+            Console.Write("Üs sayısını giriniz...:");
+            us = Int32.Parse(Console.ReadLine());
+
+            //HESAPLAMA
+
+            
+            for (i=1;i<=us;i++)
+            {
+                sonuc*=taban;
+            }
+
+            Console.WriteLine("{0}'ın {1}. kuvveti.....:{2}", taban, us , sonuc);
+            */
+
+        }
+    }
+}
