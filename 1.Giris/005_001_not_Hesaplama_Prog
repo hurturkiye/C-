@@ -1,0 +1,56 @@
+namespace ConsoleApplication5_Not_hesaplama_IF
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*
+
+            KLAVYEDEN GİRİLEN VİZE, FİNAL NOTLARINA GÖRE ÖĞRENCİNİN NOTUNU HESAPLAYAN PROGRAM
+             
+            NOT SKALASI
+             * 100-90 AA
+             * 89-80 BB
+             * 79-70 CC
+             * 69-60 DC
+             * 59-50 DD
+             * 49-0 FF
+            
+            */
+            int vize1 = 0, vize2 = 0, final = 0, ortalama=0;
+            string vize1str, vize2str, finalstr;
+            double ort2;
+
+            Console.Write("1. Vize notunu giriniz...:");
+            vize1str=Console.ReadLine();
+            vize1 = Int32.Parse(vize1str);
+
+            Console.Write("2. Vize notunu giriniz...:");
+            vize2str = Console.ReadLine();
+            vize2 = Int32.Parse(vize2str);
+
+            Console.Write("Final notunu giriniz.....:");
+            finalstr = Console.ReadLine();
+            final = Int32.Parse(finalstr);
+
+            ortalama = ((vize1 * 2/10) + (vize2 * 2/10) + (final * 6/10));
+            ort2 = ((vize1 * 2/10) + (vize2 * 2/10) + (final * 6/10));
+
+            //if ((ortalama  > 100) || (ortalama  < 0))
+            //    Console.WriteLine("Notunuz 100'den büyük veya 0'dan küçük olamaz!!! :) ");
+            if ((ortalama  <= 100) && (ortalama  >= 90))
+                Console.WriteLine("Notunuz....:AA....{0}",ortalama);
+            else if ((ortalama < 90) && (ortalama >= 80))
+                Console.WriteLine("Notunuz....:BB....{0}",ortalama);
+            else if ((ortalama < 80) && (ortalama >= 70))
+                Console.WriteLine("Notunuz....:CC....{0}",ortalama);
+            else if ((ortalama < 70) && (ortalama >= 60))
+                Console.WriteLine("Notunuz....:DC....{0}",ortalama);
+            else if ((ortalama < 60) && (ortalama >= 50))
+                Console.WriteLine("Notunuz....:DD....{0}",ortalama);
+            else if ((ortalama < 50) && (ortalama >= 0))
+                Console.WriteLine("Notunuz....:FF....{0}",ortalama);
+                
+        }
+    }
+}
