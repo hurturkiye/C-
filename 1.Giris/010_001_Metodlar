@@ -1,0 +1,40 @@
+namespace _010_001_Metodlar
+{
+    class Program
+    {
+        // Metodlar
+
+        static double Ortalama(double toplam, double kacSayi)
+        {   // Ortalama'yı bulan metod
+            double sonuc = toplam / kacSayi;
+            return sonuc;
+        }
+
+        static int SayiIste(int i)
+        {   // Kullanıcıdan sayıları isteyen metod
+            Console.Write(i + ". sayıyı giriniz...:");
+            int sayi = Convert.ToInt32(Console.ReadLine());
+            return sayi;
+        }
+
+        static int KacSayiIste()
+        {   // Kullanıcının kaç sayı gireceğini isteyen metod
+            Console.Write("Kaç sayının ortalamasını bulmak istiyorsunuz...?");
+            int kacSayi = Convert.ToInt32(Console.ReadLine());
+            return kacSayi;
+        }
+
+        static void Main(string[] args)
+        {
+            int kacSayi = KacSayiIste();            
+            int toplam = 0;
+            for(int i = 0; i < kacSayi; i++)
+            {              
+                toplam += SayiIste(i);
+            }
+
+            Console.WriteLine(Ortalama(toplam, kacSayi));
+        }
+
+    }
+}
