@@ -1,0 +1,42 @@
+namespace Sayı_Tahmin_Oyunu
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // 0-100 arasında rastgele bir sayı tutarak kullanıcıdan tahmin etmesini isteyen program
+            int deneme = 1, tahmin = 0;
+
+            Random myrand = new Random();
+            int tutSayi = myrand.Next(0,100);
+            Console.Write(tutSayi);
+            Console.Write("\n");
+            Console.WriteLine("{0}. denemeniz.", deneme);
+
+            while (tahmin != tutSayi) 
+            {
+                Console.Write("Tahmininizi yazınız.....:");
+                tahmin = Convert.ToInt32(Console.ReadLine());
+                deneme++;
+
+                if (tahmin < tutSayi)
+                {
+                    Console.WriteLine("{0}. denemeniz.", deneme);
+                    Console.WriteLine("Daha büyük bir sayı deneyiniz :) ");
+                }
+                else if (tahmin > tutSayi)
+                {
+                    Console.WriteLine("{0}. denemeniz.", deneme);
+                    Console.WriteLine("Daha küçük bir sayı deneyiniz :) ");
+                }
+                else
+                {
+                    Console.WriteLine("Tebrikler {0}. denemenizde bildiniz :)---Tahmininiz:{1}--Tuttuğum sayı:{2}",
+                        --deneme, tahmin, tutSayi);
+                    break;
+                }
+            }
+
+        }
+    }
+}
