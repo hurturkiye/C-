@@ -9,8 +9,8 @@ namespace Sayı_Tahmin_Oyunu
 
             Random myrand = new Random();
             int tutSayi = myrand.Next(0,100);
-            Console.Write(tutSayi);
-            Console.Write("\n");
+            //Console.Write(tutSayi);
+            //Console.Write("\n");
             Console.WriteLine("{0}. denemeniz.", deneme);
 
             while (tahmin != tutSayi) 
