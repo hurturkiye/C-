@@ -1,0 +1,48 @@
+namespace _007_002_Sayi_Tahmin_Oyunu_v2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Kullanıcının tuttuğu her sayıyı en fazla 8. denemede bulur.
+            
+            string aciklama1 = "Şimdi sizinle bir oyun oynayalım :) 0-100 arasında bir sayı tutun lütfen";
+            Console.WriteLine(aciklama1);
+            string aciklama2 = "Benim tahminim sizin tuttuğunuz sayıdan küçükse k, büyükse b tuşuna basarak; bulmamda bana yardım ediniz";
+            Console.WriteLine(aciklama2);
+            string aciklama3 = "Eğer bildiysem e tuşuna basınız";
+            Console.WriteLine(aciklama3);
+
+            Random rastgele = new Random();
+            int tahmin = rastgele.Next(0,100);
+
+            int altSinir = 0, ustSinir = 100;
+            string ipucu = "";
+
+            do
+            {
+                Console.WriteLine("Tuttuğunuz sayı {0} mı/mi? Daha küçükse k, daha büyükse b, eşitse e tuşuna basınız!", tahmin);
+                ipucu = Console.ReadLine();
+
+                if (ipucu == "e")
+                {
+                    Console.WriteLine("Tebrikler bana :)");
+                }
+                else
+                {
+                    if (ipucu == "b")
+                    {
+                        altSinir = tahmin;
+                    }
+                    else if (ipucu == "k")
+                    {
+                        ustSinir = tahmin;
+                    }
+		    tahmin = (altSinir + ustSinir) / 2;
+                }
+
+            } while (ipucu != "e");
+
+        }
+    }
+}
